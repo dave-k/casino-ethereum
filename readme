@@ -1,0 +1,24 @@
+https://medium.com/@merunasgrincalaitis/the-ultimate-end-to-end-tutorial-to-create-and-deploy-a-fully-descentralized-dapp-in-ethereum-18f0cf6d7e0e
+
+npm install
+npm i -D webpack react react-dom babel-core babel-loader babel-preset-react babel-preset-env css-loader style-loader json-loader web3
+
+// build.js created in the folder dist/
+webpack
+
+// local dserver
+http-server dist/
+
+// IPFS
+export IPFS_PATH=.ipfs
+ipfs init
+ipfs daemon
+ipfs swarm peers
+
+ipfs add -r dist/
+ <the-hash> - QmQiYSwp1Ab9Z7RjDdEHNzYv5bYtznEf7Gp5XtB7ucGtC8 dist
+
+ipfs name publish <the-hash>
+ <your-hash-here> - QmPxANygYNFVs8LXQA4MzzLj6dJHh8LA19Fqp1FXU4GTCY
+
+https://gateway.ipfs.io/ipns/<your-hash-here>
