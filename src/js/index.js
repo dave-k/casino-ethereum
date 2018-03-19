@@ -23,7 +23,7 @@ class App extends React.Component {
       }
 
       const MyContract = web3.eth.contract([{"constant":false,"inputs":[],"name":"generateNumberWinner","outputs":[],"payable":true,"type":"function"},{"constant":false,"inputs":[{"name":"myid","type":"bytes32"},{"name":"result","type":"string"}],"name":"__callback","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"numberOfBets","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_queryId","type":"bytes32"},{"name":"_result","type":"string"},{"name":"_proof","type":"bytes"}],"name":"__callback","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"player","type":"address"}],"name":"checkPlayerExists","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"resetData","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"bets","type":"uint256"}],"name":"updateMaxBets","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"number","type":"uint256"}],"name":"bet","outputs":[],"payable":true,"type":"function"},{"constant":false,"inputs":[{"name":"amountWei","type":"uint256"}],"name":"updateMinimumBet","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"distributePrizes","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"numberWinner","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"minimumBet","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"maxAmountOfBets","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"players","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalBet","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"_maxAmountOfBets","type":"uint256"}],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"}])
-      this.state.ContractInstance = MyContract.at("0x430d959fa54714aca8eecd61fae2661fca900e04")
+      this.state.ContractInstance = MyContract.at("0x33e7462960265f36fe32e046aa9d54e9468e7506")
 
       window.a = this.state
    }
@@ -105,7 +105,7 @@ class App extends React.Component {
    render(){
       return (
          <div className="main-container">
-            <h1>Bet for your best number and win huge amounts of Ether</h1>
+            <h1>Place a bet on your lucky number and win Ether</h1>
 
             <div className="block">
                <b>Number of bets:</b> &nbsp;
@@ -156,9 +156,9 @@ class App extends React.Component {
 
             <hr/>
 
-            <div><i>Only working with the Ropsten Test Network</i></div>
-            <div><i>You can only vote once per account</i></div>
-            <div><i>Your vote will be reflected when the next block is mined</i></div>
+            <div><i>Requires Ropsten Test Network</i></div>
+            <div><i>One vote per account</i></div>
+            <div><i>Votes will be reflected when the next block is mined</i></div>
          </div>
       )
    }
